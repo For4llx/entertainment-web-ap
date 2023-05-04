@@ -5,7 +5,7 @@ const theme: DefaultTheme = {
   mobile: "480px",
   desktop: "1440px",
   // Color
-  Red: "hsl(0, 97%, 63%)",
+  red: "hsl(0, 97%, 63%)",
   darkBlue: "hsl(223, 30%, 9%)",
   greyishBlue: "hsl(223, 23%, 46%)",
   semiDarkBlue: "hsl(223, 36%, 14%)",
