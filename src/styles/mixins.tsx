@@ -5,7 +5,6 @@ export const headingLarge = css`
   font-size: 32px;
   font-weight: 300;
   letter-spacing: -0.5px;
-  line-height: 1;
 `;
 
 export const headingMedium = css`
@@ -13,7 +12,6 @@ export const headingMedium = css`
   font-size: 24px;
   font-weight: 300;
   letter-spacing: 0px;
-  line-height: 1;
 `;
 
 export const headingSmall = css`
@@ -21,7 +19,6 @@ export const headingSmall = css`
   font-size: 24px;
   font-weight: 500;
   letter-spacing: 0px;
-  line-height: 1;
 `;
 
 export const headingXSmall = css`
@@ -29,7 +26,6 @@ export const headingXSmall = css`
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 0px;
-  line-height: 1;
 `;
 
 export const bodyMedium = css`
@@ -37,7 +33,6 @@ export const bodyMedium = css`
   font-size: 15px;
   font-weight: 300;
   letter-spacing: 0px;
-  line-height: 1;
 `;
 
 export const BodySmall = css`
@@ -45,5 +40,4 @@ export const BodySmall = css`
   font-size: 13px;
   font-weight: 300;
   letter-spacing: 0px;
-  line-height: 1;
 `;

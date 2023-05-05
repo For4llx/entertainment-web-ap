@@ -1,6 +1,9 @@
+import AppForm from "@/components/form/AppForm";
+import AppFormInput from "@/components/form/AppFormInput";
+import AppFormList from "@/components/form/AppFormList";
+import AppFormListItem from "@/components/form/AppFormListItem";
 import AppButton from "@/components/ui/AppButton";
 import AppHeading from "@/components/ui/AppHeading";
-import AppInputField from "@/components/ui/AppInputField";
 import AppLink from "@/components/ui/AppLink";
 import AppParagraph from "@/components/ui/AppParagraph";
 import styled from "styled-components";
@@ -16,39 +19,29 @@ const LoginContainer = styled.div`
   width: 400px;
 `;
 
-const LoginForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  width: 100%;
-`;
+interface ILogin {
+  onFormSwitch: Function;
+}
 
-const FormFieldContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-`;
-
-const SignUpRedirection = styled.div`
-  display: flex;
-  gap: 0.5rem;
-`;
-
-const Login = () => {
+const Login = ({ onFormSwitch }: ILogin) => {
   return (
     <LoginContainer>
-      <LoginForm>
+      <AppForm>
         <AppHeading large>Login</AppHeading>
-        <FormFieldContainer>
-          <AppInputField placeholder="Email address" />
-          <AppInputField placeholder="Password" />
-        </FormFieldContainer>
+        <AppFormList>
+          <AppFormListItem>
+            <AppFormInput placeholder="Email address" />
+          </AppFormListItem>
+          <AppFormListItem>
+            <AppFormInput placeholder="Password" />
+          </AppFormListItem>
+        </AppFormList>
         <AppButton>Login to your account</AppButton>
-      </LoginForm>
-      <SignUpRedirection>
-        <AppParagraph>Don't have an account?</AppParagraph>
-        <AppLink>Sign up</AppLink>
-      </SignUpRedirection>
+      </AppForm>
+      <AppParagraph>
+        Don't have an account?{` `}
+        <AppLink onClick={() => onFormSwitch("signup")}>Sign up</AppLink>
+      </AppParagraph>
     </LoginContainer>
   );
 };
