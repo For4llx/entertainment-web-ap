@@ -40,7 +40,9 @@ const Login = ({ onFormSwitch }: ILogin) => {
       </AppForm>
       <AppParagraph>
         Don't have an account?{` `}
-        <AppLink onClick={() => onFormSwitch("signup")}>Sign up</AppLink>
+        <AppLink red onClick={() => onFormSwitch("signup")}>
+          Sign up
+        </AppLink>
       </AppParagraph>
     </LoginContainer>
   );
