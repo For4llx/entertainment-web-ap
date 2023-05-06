@@ -43,7 +43,9 @@ const SignUp = ({ onFormSwitch }: ISignUp) => {
       </AppForm>
       <AppParagraph>
         Already have an account?{` `}
-        <AppLink onClick={() => onFormSwitch("login")}>Login</AppLink>
+        <AppLink red onClick={() => onFormSwitch("login")}>
+          Login
+        </AppLink>
       </AppParagraph>
     </LoginContainer>
   );

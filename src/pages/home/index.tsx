@@ -1,11 +1,11 @@
 import Head from "next/head";
-import Authentificaiton from "@/features/Authentification";
 import { GlobalStyles } from "@/styles/Global";
 import { ThemeProvider } from "styled-components";
 import { theme } from "@/styles/Theme";
-import AuthentificationLayout from "@/layouts/Authentification";
+import BrowseLayout from "@/layouts/Browse";
+import Browse from "@/features/Browse";
 
-export default function AuthentificationPage() {
+export default function HomePage() {
   return (
     <>
       <Head>
@@ -21,12 +21,12 @@ export default function AuthentificationPage() {
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <AuthentificationLayout>
-        <ThemeProvider theme={theme}>
-          <GlobalStyles />
-          <Authentificaiton />
-        </ThemeProvider>
-      </AuthentificationLayout>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <BrowseLayout>
+          <Browse />
+        </BrowseLayout>
+      </ThemeProvider>
     </>
   );
 }
