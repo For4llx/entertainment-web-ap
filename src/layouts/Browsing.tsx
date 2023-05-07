@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const BrowseLayout = styled.div`
+const BrowsingLayout = styled.div`
   display: flex;
   gap: 2rem;
   height: 100%;
@@ -11,4 +11,4 @@ const BrowseLayout = styled.div`
   }
 `;
 
-export default BrowseLayout;
+export default BrowsingLayout;

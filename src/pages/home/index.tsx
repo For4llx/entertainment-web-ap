@@ -1,9 +1,6 @@
 import Head from "next/head";
-import { GlobalStyles } from "@/styles/Global";
-import { ThemeProvider } from "styled-components";
-import { theme } from "@/styles/Theme";
-import BrowseLayout from "@/layouts/Browse";
-import Browse from "@/features/Browse";
+import Browsing from "@/features/Browsing";
+import BrowsingLayout from "@/layouts/Browsing";
 
 export default function HomePage() {
   return (
@@ -21,12 +18,9 @@ export default function HomePage() {
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        <BrowseLayout>
-          <Browse />
-        </BrowseLayout>
-      </ThemeProvider>
+      <BrowsingLayout>
+        <Browsing />
+      </BrowsingLayout>
     </>
   );
 }
